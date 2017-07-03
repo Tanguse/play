@@ -1,0 +1,104 @@
+.clearfix { 
+  *zoom: 1; 
+} 
+.clearfix:before, 
+.clearfix:after { 
+  display: table; 
+  line-height: 0; 
+  content: ""; 
+} 
+.clearfix:after { 
+  clear: both; 
+}
+dd,dl,dt,ul,li,h1,h2,h3,h4,h5,h6,button,p,i,a{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: "微软雅黑";
+	margin: 0;
+	padding: 0;
+}
+header{
+	width: 100%;
+}
+.logo{
+    width: 64px;
+    height: 64px;
+    background: url(https://gw.alicdn.com/tfs/TB1p.BGQXXXXXbFXFXXXXXXXXXX-160-160.png) no-repeat;
+    background-size: 100% 100%;
+    margin: 38px auto 0;
+}
+form{
+	width: 100%;
+}
+.form-cen{
+	width: 87%;
+	margin: 0 auto;
+}
+.zhanghao,.mima{
+	width: 100%;
+	border-bottom: 1px solid red;
+	padding-bottom: 3px;
+	margin-top: 40px;
+}
+#name{
+	width: 90%;
+	border: 0;
+	outline: none;
+	color: #333;
+}
+#key{
+	width: 80%;
+	border: 0;
+	outline: none;
+	color: #333;
+}
+.close1,.close2{
+	display: inline-block;
+  width: 8%;
+  text-align: center;
+}
+.eye{
+  position: relative;
+  top: 2px;
+}
+.free{
+	margin-top: 15px;
+	color: #555;
+}
+.free-fl{
+	display: block;
+	float: left;
+	font-size: 12px;
+}
+.free-fr{
+	display: block;
+	float: right;
+	font-size: 12px;
+}
+.login1{
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    border: 0;
+    background: -webkit-linear-gradient(left,#ff9000,#ff5000) no-repeat;
+    color: #fff;
+    box-shadow: 0 0.08rem 0.16rem #f7c7b1;
+    margin-top: 20px;
+    opacity: .5
+}
+.login2{
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 0.08rem 0.16rem #f7c7b1;	
+    border: 1px solid #ff5000;
+    color: #ff5000;
+    margin-top: 20px;
+}

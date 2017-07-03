@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="shortcut icon" href="img/favicon.ico" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	<script type="text/javascript" src="https://ss1.bdstatic.com/5eN1bjq8AAUYm2zgoY3K/r/www/cache/static/protocol/https/jquery/jquery-1.10.2.min_65682a2.js"></script>	
+	<body>
+		<!--header star-->
+		<header>
+			<div class="logo"></div>
+		</header>
+		<!--header end-->
+		<!--form star-->
+		<form>
+			<div class="form-cen">
+				<div class="zhanghao">
+					<input id="name" type="text" placeholder="手机号/邮箱/会员名" value=""/>
+					<span class="close1"><p>x</p></span>
+				</div>
+				<div class="mima">
+					<input id="key" type="password" placeholder="请输入密码" value="" />
+					<span class="close2"><p>x</p></span>
+					<span class="eye"><img src="img/eyeblock.png"/></span>
+				</div>	
+				<div class="free clearfix">
+					<span class="free-fl">免费注册</span>
+					<span class="free-fr">忘记密码</span>
+				</div>
+				<button type="submit" class="login1">登录</button>
+				<button type="submit" class="login2">短信验证码登录</button>
+			</div>	
+		</form>
+		<!--form end-->
+	</body>
+	<script type="application/javascript">
+//		$(document).click(function(){
+// 			 $(".close1").hide();
+//		});
+		$(document).click(function(){
+			$(".close1").hide();
+		})
+		$(".close1").click(function(){
+			$("#name").val("");
+			$(".close1").hide();
+		})
+		
+		$("#name").bind('input propertychange',function(){
+			var name = $("#name").val();
+			var keyword = $("#key").val();
+			if(name != "" && keyword != ""){
+				$(".login1").css({"opacity":"1"})
+			}else{
+				$(".login1").css({"opacity":"0.5"})
+			}
+		})
+		$("#key").bind('input propertychange',function(){
+			var name = $("#name").val();
+			var keyword = $("#key").val();
+			if(name != "" && keyword != ""){
+				$(".login1").css({"opacity":"1"})
+			}else{
+				$(".login1").css({"opacity":"0.5"})
+			}
+		})
+		var a = 1;
+		$(".eye").click(function(){
+			if(a == 1){
+				$("#key").attr("type","");
+				a = 2;
+			}else{
+				$("#key").attr("type","password");
+				a = 1;
+			}
+		})
+		$(".close1").hide();
+		$("#name").bind('input propertychange',function(){
+			var name = $("#name").val();
+			if(name != ""){
+				$(".close1").show();
+			}else{
+				$(".close1").hide();
+			}
+		})
+		$("#name").click(function(){
+			$(".close1").show();
+		})		
+		$("#name").click(function(event){
+			event.stopPropagation();  //筛选出来
+			var name = $("#name").val();
+			if(name == ""){
+				$(".close1").hide();
+			}else{
+				$(".close1").show();
+			}	
+		})
+
+//		function myfunction(x){
+//			var name = $("#name").val();
+//			var keyword = $("#key").val();
+//			if(name != ""){
+//				$(".close1").show();
+//			}else{
+//				$(".close1").hide();
+//			}
+//		}
+	</script>
+</html>
+
